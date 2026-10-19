@@ -1,8 +1,5 @@
 # Genome Assembly and Reference-Guided Scaffolding of *Pharomachrus mocinno*
 
-**Last update:** 09 July 2026  
-**Analysis and report:** Luiz Cauz dos Santos  
-
 ## Table of Contents
 
 - [1. Primary Assembly Using Oxford Nanopore Technologies (ONT)](#1-primary-assembly-using-oxford-nanopore-technologies-ont)
