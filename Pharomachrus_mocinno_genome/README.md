@@ -267,7 +267,6 @@ blobtools view \
   Pharomachrus_mocinno_bt2
 ```
 
-![Snail plot scaffolding](Figures/Quetzal/Pharomachrus_mocinno.snail.svg)
 
 ## 5. Mapping-based validation of the scaffolded assembly
 
@@ -442,8 +441,6 @@ These results support a high level of structural completeness in the RagTag-scaf
 
 The telomere summary file (`*.telo.info`) was further integrated with scaffold length information (from the FASTA index, `.fai`) and RagTag scaffolding data (AGP file) using a **custom Python script** developed for this project. This script parsed scaffold lengths, join coordinates introduced during RagTag scaffolding, and telomere presence/absence at scaffold ends, and combined these features into a publication-quality structural overview of the assembly. The resulting figure displays: (i) scaffold lengths on a megabase scale, (ii) positions of RagTag joins, and (iii) presence of telomeric repeats at scaffold extremities. Chromosome-scale scaffolds were ordered according to their final naming scheme, and optional filtering allowed exclusion of small unplaced scaffolds below a defined size threshold.
 
-![Joins + Telomere distribution on the scaffolded genome](Figures/Quetzal/Figure1_Quetzal_RagTag_joins_telomeres_primary_scaffolds_only.png)
-**Figure. Distribution of RagTag scaffold joins and telomeric repeat signals across the primary reference-guided scaffolds of Pharomachrus mocinno.** Scaffolds ≥5 Mb are shown in the order inferred from their correspondence with the chromosome-level genome of Trogon surrucura, which was used as the scaffolding reference. Grey bars represent scaffold lengths, orange marks indicate 100-bp placeholder joins introduced during RagTag scaffolding, and green triangles denote scaffold ends where canonical vertebrate telomeric repeats were detected. Scaffold labels are abbreviated for visualization and correspond to final assembly names Pmoc_scaf0001–Pmoc_scaf0031, with full names, lengths, and T. surrucura correspondences provided in Table S1. Pmoc_scaf0031 corresponds to the Z chromosome/scaffold of the T. surrucura reference. These labels reflect reference-guided assignments and should not be interpreted as an independently validated P. mocinno karyotype. The vertical axis shows scaffold size in megabases (Mb). Join markers are visually enhanced for readability and do not reflect their true physical length.
 
 **OBS: The full script for generating the Figure is provided in Annexes - A1**
 
@@ -809,7 +806,6 @@ Structural statistics and BUSCO completeness metrics were used to assess annotat
 
 **OBS**: The gene annotation for *Trogon surrucura* from the Vertebrate Genome Project (VGP) contains 14,763 predicted genes (Info: https://projects.ensembl.org/vgp/).
 
-![Annotation stats](Figures/Quetzal/Quetzal_BRAKER_annotation_structure_genelevel.png)
 
 #### BUSCO completeness (aves_odb10)
 
@@ -1134,8 +1130,6 @@ Final dataset size: ~194,000 proteins
 
 **PROT_COMBO** yields a modest increase in gene and transcript counts, and BUSCO completeness improves slightly with **PROT_COMBO**, mainly due to fewer missing BUSCOs.
 
-![Figure 2 - Quetzal paper](Figures/Quetzal/Figure2_SnailPlot_CircosPlot.jpg)
-**Figure. Genome assembly overview and genome-wide feature distribution of Pharomachrus mocinno.** (A) Adult male P. mocinno photographed in its natural cloud-forest habitat. (B) BlobToolKit snail plot summarizing the final reference-guided assembly. The plot shows assembly size, scaffold length distribution, N50/N90 statistics, GC/AT composition, and BUSCO completeness based on the aves_odb10 dataset. (C) Circos plot showing the distribution of genomic features across chromosome-scale scaffolds larger than 5 Mb. Scaffold labels are abbreviated for visualization: numbers 1–31 correspond to final assembly sequences Pmoc_scaf0001–Pmoc_scaf0031, while U1 and U2 represent the two largest unplaced scaffolds included in the plot. Tracks are shown from outside to inside: scaffold ideograms, GC content, gene density, and repeat density, calculated in non-overlapping 200 kb windows. GC content is shown as a black line on a 0–100% scale, while gene and repeat density are shown as blue and orange intensity tracks, respectively.
 
 ---
 
@@ -1156,13 +1150,6 @@ This workflow generates a pairwise synteny/collinearity analysis strictly for **
 - `synteny_mcscanx/QTTS.collinearity` (MCScanX collinear blocks)
 - `synteny_mcscanx/QTTS.summary.tsv` (counts for technical validation)
 - Intermediate: RBH pairs + formatted `.gff`/`.blast`
-
-#### Results
-
-![Comparative karyotype alignment](Figures/Quetzal/karyotype_alllabels_centered.svg)
-**Figure. Genome-wide synteny between *Pharomachrus mocinno* and the chromosome-level reference genome of *Trogon surrucura*.** Syntenic relationships were inferred with MCScanX from collinear blocks between orthologous genomic regions. Ribbons connect conserved collinear blocks, and chromosomes or scaffolds are shown in proportional length. P. mocinno scaffold labels follow their reference-guided correspondence with the T. surrucura genome and do not represent independently assigned chromosome numbers. U1 and U2 denote unplaced P. mocinno sequences that contained detectable collinear anchors but were not assigned to chromosome-scale scaffolds under the conservative RagTag criteria. The overall pattern shows extensive macrosynteny conservation between the two trogonid genomes, with no evidence of major genome-wide rearrangement at the resolution of this analysis.
-
-The figure illustrates the comparative karyotype alignment between *P. mocinno* and *T. surrucura*, based on the gene annotations of both genome assemblies. Chromosomes are ordered and labeled sequentially for each species, highlighting conserved syntenic blocks and revealing large-scale structural relationships between homologous genomic regions. The connecting ribbons represent correspondences inferred from annotated gene positions, allowing the visualization of chromosomal collinearity as well as potential rearrangements between the two genomes. The figure also highlights the presence of unplaced scaffolds in *P. mocinno* and the identification of the Z chromosome in *T. surrucura*, providing additional insights into assembly structure and sex chromosome differentiation. Overall, this annotation-based karyotype comparison provides a genome-wide perspective of chromosomal conservation and structural divergence between the two species.
 
 
 ---
